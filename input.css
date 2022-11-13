@@ -92,3 +92,93 @@
                 transform: translateX(0);
         }
 }
+
+/* Animasi Jika Scroll Menggunakan IntersectionObserver */
+:root{
+        --time: 1s;
+        --delay: 0s;
+}
+/* time css */
+.time-1{
+        --time: 1s;
+}
+.time-2{
+        --time: 2s;
+}
+.time-3{
+        --time: 3s;
+}
+.time-4{
+        --time: 4s;
+}
+.time-5{
+        --time: 5s;
+}
+.time-6{
+        --time: 6s;
+}
+.delay-1{
+        --delay: 200ms;
+}
+.delay-2{
+        --delay: 400ms;
+}
+.delay-3{
+        --delay: 600ms;
+}
+.delay-4{
+        --delay: 750ms;
+}
+.delay-5{
+        --delay: 850ms;
+}
+.delay-6{
+        --delay: 1000ms;
+}
+
+/* Animasi CSS */
+.tersembunyi{
+        opacity: 0;
+        filter: blur(2px);
+        transition: all var(--time);
+        transition-delay: var(--delay);
+}
+.terlihat{
+        opacity: 1;
+        filter: blur(0);
+}
+
+.tersembunyi.fade-right{
+        transform: translateX(-100%);
+}
+.terlihat.fade-right{
+        transform: translateX(0);
+}
+.tersembunyi.fade-left{
+        transform: translateX(100%);
+}
+.terlihat.fade-left{
+        transform: translateX(0);
+}
+.tersembunyi.fade-down{
+        transform: translateY(-100%);
+}
+.terlihat.fade-down{
+        transform: translateY(0);
+}
+.tersembunyi.fade-up{
+        transform: translateY(100%);
+}
+.terlihat.fade-up{
+        transform: translateY(0);
+}
+
+.tersembunyi.zoom-in{
+        transform: translateZ(-100%);
+        scale: 0;
+}
+.terlihat.zoom-in{
+        transform: translateZ(0);
+        scale:1;
+}
+

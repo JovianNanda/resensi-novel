@@ -144,7 +144,7 @@
                 </div>
                 <!-- Content Utama -->
                 <div class="w-fit h-fit pt-4 pb-10 mt-16 rounded overflow-hidden">
-                    <section id="home" class="w-full mb-24 scroll-mt-40">
+                    <section id="home" class="w-full mb-24 scroll-mt-40 tersembunyi">
                         <div class="relative page-1 px-6 overflow-hidden h-fit card border-none rounded-lg image bg-[#D5643C]"
                             id="card-1">
                             <div class="flex flex-wrap items-center">
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                     </section>
-                    <section id="quote">
+                    <section id="quote" class="tersembunyi fade-right time-2">
                         <figure class="mx-auto max-w-screen-md text-center">
                             <i class="fa-solid fa-quote-right text-grey fa-6x"></i>
                             <blockquote>
@@ -222,15 +222,15 @@
                         </figure>
                     </section>
                     <section id="tentang" class="w-full scroll-mt-20 mt-16">
-                        <div class="tokoh">
-                            <div class="grid xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-9">
+                        <div class="tokoh ">
+                            <div class="grid xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-9 ">
                                 <button type="button"
-                                    class="font-medium rounded-full bg-secondary px-6 py-2 text-center hover:bg-[#f3c866dd] transition-all duration-500">Sinopsis</button>
+                                    class="btn font-medium rounded-full bg-secondary px-6 py-2 text-center hover:bg-[#f3c866dd] transition-all duration-500 tersembunyi fade-right ">Sinopsis</button>
                                 <button type="button"
-                                    class="font-medium rounded-full bg-grey border-[1px] border-gray-600 px-6 py-2 text-center hover:bg-[#f3c866dd] hover:text-gray-800 text-grey transition-all duration-500">Tokoh</button>
+                                    class="btn font-medium rounded-full bg-grey border-[1px] border-gray-600 px-6 py-2 text-center hover:bg-[#f3c866dd] hover:text-gray-800 text-grey transition-all duration-500 tersembunyi fade-right delay-2">Tokoh</button>
                             </div>
                             <div
-                                class="sinopsis-card mt-10 flex flex-col items-center  rounded-lg border shadow-xl md:flex-row border-gray-700 bg-[#1A1E1F]">
+                                class="sinopsis-card mt-10 flex flex-col items-center  rounded-lg border shadow-xl md:flex-row border-gray-700 bg-[#1A1E1F] tersembunyi fade-up">
                                 <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none border-r-4 border-gray-700"
                                     md:rounded-l-lg" src="assets/cover.jpg" alt="Cover Foto Sherlock Lupin & Aku">
                                 <div class="flex flex-col justify-between p-4 leading-normal px-10">
@@ -250,7 +250,7 @@
                                 </div>
 
                             </div>
-                            <div class="card-wrapper shadow-xl">
+                            <div class="card-wrapper shadow-xl tersembunyi zoom-in">
                                 <div
                                     class="grid mt-12 rounded-t-lg border-t border-l border-r shadow-md border-gray-700  md:grid-cols-1 text-4xl">
                                     <figure
@@ -335,6 +335,7 @@
                 </div>
             </div>
         </div>
+        <script src="animasi.js"></script>
         <script>
             var glass = document.getElementById("magnifying-glass");
             var searchBar = document.getElementById("searchBar")
