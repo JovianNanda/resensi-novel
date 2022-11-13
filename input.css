@@ -20,7 +20,10 @@
 .bg-primary{
         background-color :#9CBCBB
 }
-    
+.bg-secondary{
+        background-color :#FACD66
+}
+
 .bg-light{
         background-color: #efeee0;
 }
