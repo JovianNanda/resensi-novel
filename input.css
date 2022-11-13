@@ -66,6 +66,9 @@
         animation: fadeInUp var(--time) ease-in-out forwards;
         animation-delay: calc(var(--order) * 200ms);
 }
+.btn-active{
+        @apply hover:bg-[#f3c866dd] bg-secondary text-black
+}
 
 #mobile-nav{
         transform: translateX(-260px);
@@ -174,11 +177,9 @@
 }
 
 .tersembunyi.zoom-in{
-        transform: translateZ(-100%);
         scale: 0;
 }
 .terlihat.zoom-in{
-        transform: translateZ(0);
         scale:1;
 }
 
