@@ -32,7 +32,7 @@
 <body class="bg-[#1D2123]">
 
     <!-- component -->
-    <div class="w-full h-full">
+    <div class="w-full h-full ">
         <div class="flex flex-nowrap">
             <!-- Sidebar starts -->
             <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
@@ -44,15 +44,15 @@
                     </div>
                     <div class="bg-[#1A1E1F] py-6 w-[3.5rem] rounded-full mt-4">
                         <ul class="w-full">
-                            <li class="flex justify-center text-[#FACD66] cursor-pointer items-center mb-6">
+                            <li class="flex justify-center sidebar-active cursor-pointer items-center mb-6">
                                 <a href="javascript:void(0)"
-                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-white transition-all duration-500">
+                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-secondary transition-all duration-500">
                                     <i class="fas fa-house"></i>
                                 </a>
                             </li>
-                            <li class="flex  justify-center text-[#FACD66] cursor-pointer items-center ">
+                            <li class="flex  justify-center text-grey cursor-pointer items-center ">
                                 <a href="javascript:void(0)"
-                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-white transition-all duration-500">
+                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-secondary transition-all duration-500">
                                     <i class="fa-solid fa-book"></i>
                                 </a>
                             </li>
@@ -80,15 +80,15 @@
                     </div>
                     <ul class="mt-20 mb-[200%] ">
                         <li
-                            class="flex w-full justify-between text-[#FACD66] hover:text-white cursor-pointer items-center mb-6 transition-all duration-500 focus:outline-none focus:text-white">
+                            class="flex ustify-between sidebar-active hover:text-white cursor-pointer items-center mb-6 transition-all duration-500 focus:outline-none focus:text-white">
                             <a href="javascript:void(0)" class="flex items-center ">
                                 <i class="fas fa-house"></i>
                                 <span class="text-md ml-6">Home</span>
                             </a>
                         </li>
                         <li
-                            class="flex w-full justify-between text-[#FACD66] hover:text-white cursor-pointer items-center mb-6  transition-all duration-500">
-                            <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:text-white">
+                            class="flex  justify-between text-grey hover:text-white cursor-pointer items-center mb-6  transition-all duration-500 focus:outline-none focus:text-white">
+                            <a href="javascript:void(0)" class="flex items-center">
                                 <i class="fas fa-book"></i>
                                 <span class="text-md ml-6">Book</span>
                             </a>
@@ -123,9 +123,9 @@
                         type="text" placeholder="Search" id="searchBar" />
                 </div>
                 <!-- Content Utama -->
-                <div class="w-full h-full rounded mt-8">
+                <div class="w-fit h-fit py-8 rounded overflow-hidden">
                     <section id="page-1" class="w-full">
-                        <div class="relative page-1 px-6 py-10 overflow-hidden h-fit card rounded-lg image bg-[#D5643C]"
+                        <div class="relative page-1 px-6 py-10 overflow-hidden h-fit card border-none rounded-lg image bg-[#D5643C]"
                             id="card-1">
                             <div class="flex flex-wrap items-center">
                                 <div class="content w-full px-4 text-white">
@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 ">
-                                    <div class="content text-white  ml-4">
+                                    <div class="content text-white ml-4">
                                         <div style="--order:2"
                                             class="content block md:hidden w-full md:w-1/2 z-10 my-10 md:my-0">
                                             <img class="md:mx-auto w-80 right-24 top-0 border-2 rounded-md"
@@ -173,8 +173,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="--order:5.5"
-                                    class="content hidden md:block w-full md:w-1/2 z-10 my-10 md:my-0">
+                                <div style="--order:5.5; --time:1s"
+                                    class="fadeInUp hidden md:block w-full md:w-1/2 z-10 my-10 md:my-0">
                                     <img class="md:mx-auto w-80 right-24 top-0 border-2 rounded-md"
                                         src="assets/cover.jpg" alt="">
                                 </div>

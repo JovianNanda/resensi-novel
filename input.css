@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-light{
+        color: #EFEEE0;
+    }
+.text-grey{
+        color: #ffffff40
+}
+.text-secondary{
+        color: #FACD66;
+}
+.active{
+        @apply text-white;
+}
+.text-primary{
+        color:#9CBCBB;
+}
+.bg-primary{
+        background-color :#9CBCBB
+}
+    
+.bg-light{
+        background-color: #efeee0;
+}
+.bg-dark{
+        background-color: #1d2123;
+}
+
+.card{
+        @apply px-4 py-5 border rounded-md sm:px-6 h-fit w-fit
+    }
+.card-light{
+        @apply bg-white border-gray-200 text-black
+    }
+.card-dark{
+        @apply bg-dark border-gray-700 text-white
+    }
+.card-header{
+        @apply text-xl leading-6 font-medium
+}
+.sidebar-active{
+        @apply text-secondary
+    }
 #card-1{
         background-image: url("assets/vector.svg");
         background-repeat: no-repeat;
@@ -14,7 +55,12 @@
 
 .content{
         opacity: 0;
-        animation: dropInFromLeft 5s ease forwards;
+        animation: dropInFromLeft 5s ease-in-out forwards;
+        animation-delay: calc(var(--order) * 200ms);
+}
+.fadeInUp{
+        opacity: 0;
+        animation: fadeInUp var(--time) ease-in-out forwards;
         animation-delay: calc(var(--order) * 200ms);
 }
 
