@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#card-1{
+        background-image: url("assets/vector.svg");
+        background-repeat: no-repeat;
+        background-color: #D5643C;
+        background-size: cover;
+}
+.page-1{
+        animation: fadeInUp 1s;
+}
+
+.content{
+        opacity: 0;
+        animation: dropInFromLeft 5s ease forwards;
+        animation-delay: calc(var(--order) * 200ms);
+}
+
+#mobile-nav{
+        transform: translateX(-260px);
+}
+
+@keyframes fadeInUp {
+        from{
+                opacity: 0;
+                transform: translateY(20%);
+        }
+        to{
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+@keyframes dropInFromLeft {
+        0%{
+                opacity: 0;
+                transform: translateX(-20%);
+        }
+        30%,100%{
+                opacity: 1;
+                transform: translateX(0);
+        }
+}

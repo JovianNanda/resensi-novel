@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fasthand&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .fs-quicksand {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .fs-dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .fs-fasthand {
+            font-family: 'Fasthand', cursive;
+        }
+    </style>
+</head>
+
+<body class="bg-[#1D2123]">
+
+    <!-- component -->
+    <div class="w-full h-full">
+        <div class="flex flex-nowrap">
+            <!-- Sidebar starts -->
+            <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
+            <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+            <div class="w-fit sticky z-20 top-0 left-0 md:h-full flex-col justify-between hidden sm:flex">
+                <div class="px-8 ">
+                    <div class="h-20 w-full flex items-center">
+                        <img class="h-10 mx-auto" src="assets/detective-_2_ 1.svg" alt="Detective Logo">
+                    </div>
+                    <div class="bg-[#1A1E1F] py-6 w-[3.5rem] rounded-full mt-4">
+                        <ul class="w-full">
+                            <li class="flex justify-center text-[#FACD66] cursor-pointer items-center mb-6">
+                                <a href="javascript:void(0)"
+                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-white transition-all duration-500">
+                                    <i class="fas fa-house"></i>
+                                </a>
+                            </li>
+                            <li class="flex  justify-center text-[#FACD66] cursor-pointer items-center ">
+                                <a href="javascript:void(0)"
+                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-white transition-all duration-500">
+                                    <i class="fa-solid fa-book"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Version -->
+            <div class="w-fit z-40 fixed top-0 left-0 h-full  bg-[#1A1E1F] shadow md:h-full flex-col justify-between sm:hidden transition duration-[350ms] ease-in-out"
+                id="mobile-nav">
+                <button aria-label="toggle sidebar" id="openSideBar"
+                    class="h-10 w-10 bg-[#1A1E1F] absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 rounded focus:ring-gray-800"
+                    onclick="sidebarHandler(true)">
+                    <i class="fa-solid fa-caret-right text-white"></i>
+                </button>
+                <button aria-label="Close sidebar" id="closeSideBar"
+                    class="hidden h-10 w-10 bg-[#1A1E1F] absolute right-0 mt-16 -mr-10  items-center shadow rounded-tr rounded-br justify-center cursor-pointer text-white"
+                    onclick="sidebarHandler(false)">
+                    <i class="fa-solid fa-caret-left text-white"></i>
+                </button>
+                <div class="px-8">
+                    <div class="h-16 w-full mb-4 items-center">
+                        <img class="h-16 mt-4 mx-auto" src="assets/detective-_2_ 1.svg" alt="Detective Logo">
+                        <h1 class="text-center text-white fs-dancing text-xl mt-4">Sherlock Lupin & Aku</h1>
+                    </div>
+                    <ul class="mt-20 mb-[200%] ">
+                        <li
+                            class="flex w-full justify-between text-[#FACD66] hover:text-white cursor-pointer items-center mb-6 transition-all duration-500 focus:outline-none focus:text-white">
+                            <a href="javascript:void(0)" class="flex items-center ">
+                                <i class="fas fa-house"></i>
+                                <span class="text-md ml-6">Home</span>
+                            </a>
+                        </li>
+                        <li
+                            class="flex w-full justify-between text-[#FACD66] hover:text-white cursor-pointer items-center mb-6  transition-all duration-500">
+                            <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:text-white">
+                                <i class="fas fa-book"></i>
+                                <span class="text-md ml-6">Book</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex justify-center mb-4 w-full">
+                        <div class="relative">
+                            <div class="text-gray-300 absolute ml-4 inset-0 m-auto w-4 h-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
+                                    width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                                    <circle cx="10" cy="10" r="7"></circle>
+                                    <line x1="21" y1="21" x2="15" y2="15"></line>
+                                </svg>
+                            </div>
+                            <input
+                                class="bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-100  rounded w-full text-sm text-black placeholder-gray-400 bg-gray-100 pl-10 py-2"
+                                type="text" placeholder="Search" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar selese -->
+            <div class="container-fluid mt-6 sm:mt-0 md:mx-0 mx-auto ml-6 pt-2  md:w-full w-full px-6">
+                <div class="relative hidden sm:flex">
+                    <div class="absolute ml-3 inset-0 m-auto h-6 w-4 text-gray-500" id="magnifying-glass">
+                        <i class=" text-sm fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input
+                        class="transition-all duration-700 bg-[#1D2123] h-16 focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder-gray-500 focus:placeholder-gray-200 rounded w-full text-sm text-gray-300   pl-10 py-2"
+                        type="text" placeholder="Search" id="searchBar" />
+                </div>
+                <!-- Content Utama -->
+                <div class="w-full h-full rounded mt-8">
+                    <section id="page-1" class="w-full">
+                        <div class="relative page-1 px-6 py-10 overflow-hidden h-fit card rounded-lg image bg-[#D5643C]"
+                            id="card-1">
+                            <div class="flex flex-wrap items-center">
+                                <div class="content w-full px-4 text-white">
+                                    <div class="mb-5 mt-6">
+                                        <span
+                                            class="fs-dancing items-center px-2 py-0.5 rounded font-bold text-2xl text-white pl-4 sm:text-3xl">
+                                            I r e n e &nbsp; A d l e r</span>
+                                        <h1 class="ml-4 text-5xl mt-3 font-semibold text-light fs-dancing">Sherlock
+                                            Lupin
+                                            &
+                                            Aku <sub class="text-light fs-quicksand text-3xl ml-2">TEKA-TEKI
+                                                KOBRA</sub></h1>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 ">
+                                    <div class="content text-white  ml-4">
+                                        <div style="--order:2"
+                                            class="content block md:hidden w-full md:w-1/2 z-10 my-10 md:my-0">
+                                            <img class="md:mx-auto w-80 right-24 top-0 border-2 rounded-md"
+                                                src="assets/cover.jpg" alt="">
+                                        </div>
+                                        <blockquote class="p-4 my-4  border-l-4 border-gray-300">
+                                            <p class="fs-quicksand tracking-wider text-gray-900 dark:text-white">
+                                                Setelah pulang ke London bersama ayahnya, Irene tidak sempat
+                                                berlama-lama merasakan kegembiraan bisa bertemu kembali dengan kedua
+                                                sahabatnya, Sherlock dan Arsène, sebab tak lama setelah itu terjadi
+                                                sesuatu yang merusak ketenangan rumahnya. Orazio Nelson, sang kepala
+                                                pelayan yang sangat disayangi keluarganya, tiba-tiba saja menghilang,
+                                                setelah meninggalkan sepucuk surat berisikan pesan singkat. Irene yakin
+                                                perginya Nelson pasti dilandasi oleh suatu alasan kuat, dan dia
+                                                memutuskan untuk menyelidikinya, dengan bantuan kedua kawannya. Ketiga
+                                                remaja itu pun lantas terlibat dalam sebuah tindak kejahatan misterius
+                                                yang terjadi di kawasan Pelabuhan Docks, teka-teki misterius yang
+                                                tampaknya terkait erat dengan wilayah koloni India yang penuh pesona,
+                                                nun jauh di sana.</p>
+                                        </blockquote>
+                                        <div class="content" style="--order:4">
+                                            <p class="text-lg fs-quicksand">Ingin Mengetahui Kelanjutan Dari Cerita
+                                                Mereka?
+                                            </p>
+                                            <a type="button"
+                                                class="px-3 py-3 border mt-4 border-transparent  text-lg font-medium shadow-sm text-white bg-gradient-to-bl transition-all duration-500 from-indigo-500 to-indigo-700 hover:from-indigo-600 hover:to-indigo-800  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500  hover:scale-105 focus:scale-105 hover:text-gray-300 focus:text-gray-300 ease-in-out"
+                                                href="#baca">Baca Disini
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="--order:5.5"
+                                    class="content hidden md:block w-full md:w-1/2 z-10 my-10 md:my-0">
+                                    <img class="md:mx-auto w-80 right-24 top-0 border-2 rounded-md"
+                                        src="assets/cover.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script>
+            var glass = document.getElementById("magnifying-glass");
+            var searchBar = document.getElementById("searchBar")
+            var sideBar = document.getElementById("mobile-nav");
+            var openSidebar = document.getElementById("openSideBar");
+            var closeSidebar = document.getElementById("closeSideBar");
+            searchBar.addEventListener("focus", function () {
+                glass.classList.add("text-white")
+                glass.classList.remove("text-gray-500")
+            });
+            searchBar.addEventListener("blur", function () {
+                glass.classList.remove("text-white")
+                glass.classList.add("text-gray-500")
+            })
+
+            function sidebarHandler(flag) {
+                if (flag) {
+                    sideBar.style.transform = "translateX(0px)";
+                    openSidebar.classList.add("hidden");
+                    closeSidebar.classList.remove("hidden");
+                } else {
+                    sideBar.style.transform = "translateX(-260px)";
+                    closeSidebar.classList.add("hidden");
+                    openSidebar.classList.remove("hidden");
+                }
+            }
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
