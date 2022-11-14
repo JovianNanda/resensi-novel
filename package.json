@@ -12,6 +12,9 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
-    "flowbite": "^1.5.3"
+    "flowbite": "^1.5.3",
+    "overlayscrollbars": "^2.0.0",
+    "simplebar": "^5.3.9",
+    "smooth-scrollbar": "^8.8.1"
   }
 }

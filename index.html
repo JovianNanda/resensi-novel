@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novel Sherlock Lupin & Aku</title>
     <link rel="stylesheet" href="tailwind.css">
+
     <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -375,7 +376,8 @@
                                 <aside
                                     class="w-fit mr-2 transition-all duration-500 z-50 absolute top-0 bottom-0 left-0"
                                     aria-label="Sidebar" id="daftarIsiNav">
-                                    <div class="overflow-y-auto py-4 px-3 h-full w-full bg-gray-800 rounded shadow-xl ">
+                                    <div class="overflow-y-auto py-4 px-3 h-full w-full bg-gray-800 rounded shadow-xl "
+                                        id="sidebarDaftarIsi">
                                         <h1 class="text-center mb-5 font-bold text-2xl text-white">Daftar
                                             Isi
                                             <button aria-label="toggle sidebar" id="openDaftarIsiNav"
@@ -391,7 +393,7 @@
                                         </h1>
                                         <div class="py-4 mt-7 space-y-2 border-t border-gray-700">
                                         </div>
-                                        <ul class="space-y-2 ">
+                                        <ul class="space-y-2 " id="ulDaftarIsi">
                                             <li>
                                                 <a target-cerita="1"
                                                     class="daftarIsi-active cursor-pointer flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
@@ -428,18 +430,157 @@
                                                     </span>
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a target-cerita="5"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB V -
+                                                        Keputusan Tak Terduga
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="6"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB VI - Hari Penuh
+                                                        Kunjungan
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="7"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB VII - Dua Kawan Lama
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="8"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB VIII - Takdir
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="9"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB IX - Piknik Ke Docks
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="10"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB X - Wanita Istimewa
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="11"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XI - Nurani Sang
+                                                        Kapten
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="12"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XII - Kembang Api
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="13"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XIII - Bantuan Yang
+                                                        Dipaksakan
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="14"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XIV - Rumah yang
+                                                        Kacau Balau
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="15"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XV - Pesta Meriah
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="16"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XVI - Saat Saat
+                                                        Menegangkan
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="17"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XVII - Seorang
+                                                        Kenalan Baru
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="18"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XVII - Seorang
+                                                        Kenalan Baru
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="19"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XIX - Benih
+                                                        Pembalasan Dendam
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target-cerita="20"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap"> BAB XX - Di Tepi Sungai
+                                                    </span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </aside>
                                 <div class="buku-wrapper transition-all duration-500">
                                     <div
-                                        class="buku-content text-justify w-full min-h-[50vh] max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto overflow-x-hidden">
-                                        <h1 class="Title text-3xl text-secondary text-center fs-dancing" bab-cerita>
+                                        class="buku-content w-full min-h-[50vh] max-h-screen text-content col-span-2 md:px-10 py-6 overflow-y-auto overflow-x-hidden">
+                                        <h1 class="Title md:text-3xl text-xl text-secondary text-center fs-dancing"
+                                            bab-cerita>
 
                                         </h1>
                                         <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
                                         </div>
-                                        <div class="text-justify isi-cerita px-10 py-10 leading-8 text-xl" isi-cerita>
+                                        <div class="md:text-justify text-start isi-cerita px-10 py-10 md:leading-8 md:tracking-wider tracking-wide md:text-xl text-lg leading-5"
+                                            isi-cerita>
                                         </div>
                                     </div>
                                 </div>
@@ -453,6 +594,9 @@
             </div>
         </div>
         <script src="animasi.js"></script>
+        <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+
+
         <!-- fetch -->
         <script defer>
 
@@ -560,7 +704,7 @@
                     openDaftarIsiNav.classList.add("hidden");
                     closeDaftarIsiNav.classList.remove("hidden");
                 } else {
-                    daftarIsiBar.style.transform = "translateX(-240px)";
+                    daftarIsiBar.style.transform = "translateX(-350px)";
                     closeDaftarIsiNav.classList.add("hidden");
                     openDaftarIsiNav.classList.remove("hidden");
                 }
