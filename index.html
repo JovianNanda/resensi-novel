@@ -233,7 +233,7 @@
                             <i class="fa-solid fa-quote-right text-grey fa-6x"></i>
                             <blockquote>
                                 <p class="text-2xl italic font-medium text-secondary">"Tiga anak luar
-                                    biasa, sahabat sejati. Tiga otak cemerlang uang mengungkap kisah kejahatan.
+                                    biasa, sahabat sejati. Tiga otak cemerlang yang mengungkap kisah kejahatan.
                                     Serangkaian petualangan yang mendebarkan."</p>
                             </blockquote>
                             <figcaption class="flex justify-center items-center mt-6 space-x-3">
@@ -372,7 +372,8 @@
                         <div
                             class="buku border-2 border-dashed border-gray-700 rounded w-full shadow-xl tersembunyi fade-left time-2 overflow-x-hidden">
                             <div class="grid grid-flow-col auto-cols-auto relative">
-                                <aside class="w-fit mr-2 transition-all duration-500 absolute top-0 bottom-0 left-0"
+                                <aside
+                                    class="w-fit mr-2 transition-all duration-500 z-50 absolute top-0 bottom-0 left-0"
                                     aria-label="Sidebar" id="daftarIsiNav">
                                     <div class="overflow-y-auto py-4 px-3 h-full w-full bg-gray-800 rounded shadow-xl ">
                                         <h1 class="text-center mb-5 font-bold text-2xl text-white">Daftar
@@ -393,17 +394,17 @@
                                         <ul class="space-y-2 ">
                                             <li>
                                                 <a target-cerita="1"
-                                                    class="daftarIsi-active cursor-pointer flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                                                    class="daftarIsi-active cursor-pointer flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB I -
-                                                        Tersembunyi</span>
+                                                        November</span>
 
                                                 </a>
                                             </li>
                                             <li>
                                                 <a target-cerita="2"
-                                                    class="flex items-center cursor-pointer p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700 transition-all duration-500">
 
-                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB II -
+                                                    <span class=" flex-1 ml-3 whitespace-nowrap">BAB II -
                                                         Tempat Istimewa
                                                     </span>
 
@@ -411,7 +412,7 @@
                                             </li>
                                             <li>
                                                 <a target-cerita="3"
-                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB III -
                                                         Pria Bertopi Biru
@@ -420,7 +421,7 @@
                                             </li>
                                             <li>
                                                 <a target-cerita="4"
-                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB IV -
                                                         Tipuan Cerdik
@@ -430,9 +431,9 @@
                                         </ul>
                                     </div>
                                 </aside>
-                                <div>
+                                <div class="buku-wrapper transition-all duration-500">
                                     <div
-                                        class="buku-content text-justify w-full min-h-[50vh] max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
+                                        class="buku-content text-justify w-full min-h-[50vh] max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto overflow-x-hidden">
                                         <h1 class="Title text-3xl text-secondary text-center fs-dancing" bab-cerita>
 
                                         </h1>
@@ -447,7 +448,6 @@
                         </div>
                     </section>
                     <section id="penulis">
-
                     </section>
                 </div>
             </div>
@@ -478,7 +478,6 @@
                     $(cerita.isi).each(function () {
                         let increment = $i++
                         isiCerita.append("<p class='mb-3 font-light text-gray-200' id='text-cerita-" + increment + "'></p>")
-
                         $("#text-cerita-" + increment).text(cerita.isi[increment])
                     })
                 }
@@ -500,15 +499,21 @@
                             $(cerita.isi).each(function (k, v) {
                                 ceritaIsi = v
                             })
-                            babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 300);
+                            babCerita.animate({ 'opacity': 0 }, 300, function () {
+                                babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 300);
+                            });
                             $i = 0;
+
                             $(cerita.isi).each(function () {
                                 let increment = $i++
                                 if (!$("#text-cerita-" + increment)) {
-                                    isiCerita.append("<p class='mb-3 font-light text-gray-200 content' id='text-cerita-" + increment + "'></p>")
-                                }
+                                    isiCerita.append("<p class='mb-3 font-light text-gray-200 content' id='text-cerita-" + increment + "'></p>");
 
-                                $("#text-cerita-" + increment).text(cerita.isi[increment])
+                                }
+                                $(isiCerita).animate({ 'opacity': 0 }, 300, function () {
+                                    isiCerita.animate({ 'opacity': 1 }, 300);
+                                    $("#text-cerita-" + increment).text(cerita.isi[increment]).animate({ 'opacity': 1 }, 300);
+                                });
                             })
 
                         }
