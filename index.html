@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novel Sherlock Lupin & Aku</title>
     <link rel="stylesheet" href="tailwind.css">
+    <script src="node_modules/flowbite/dist/flowbite.js"></script>
     <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
@@ -41,7 +44,7 @@
             <!-- Sidebar starts -->
             <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
             <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-            <div class="w-fit sticky z-20 top-0 left-0 md:h-full flex-col justify-between hidden sm:flex">
+            <div class="w-fit sticky z-20 top-0 left-0 hidden sm:flex h-full flex-col justify-between ">
                 <div class="px-8 ">
                     <div class="h-20 w-full flex items-center">
                         <img class="h-10 mx-auto" src="assets/detective-_2_ 1.svg" alt="Detective Logo">
@@ -62,8 +65,8 @@
                                     <i class="fa-solid fa-circle-info"></i>
                                 </a>
                             </li>
-                            <li class="nav_item book flex justify-center text-grey cursor-pointer items-center ">
-                                <a href="#book"
+                            <li class="nav_item buku flex justify-center text-grey cursor-pointer items-center ">
+                                <a href="#buku"
                                     class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-secondary transition-all duration-500">
                                     <i class="fa-solid fa-book" alt="Book"></i>
                                     <p class="sr-only">Book</p>
@@ -107,10 +110,10 @@
                             </a>
                         </li>
                         <li
-                            class="nav_item book flex justify-between text-grey hover:text-white cursor-pointer items-center mb-6  transition-all duration-500 focus:outline-none focus:text-white">
-                            <a href="#book" class="flex items-center">
+                            class="nav_item buku flex justify-between text-grey hover:text-white cursor-pointer items-center mb-6  transition-all duration-500 focus:outline-none focus:text-white">
+                            <a href="#buku" class="flex items-center">
                                 <i class="fas fa-book"></i>
-                                <span class="text-md ml-6">Book</span>
+                                <span class="text-md ml-6">Buku</span>
                             </a>
                         </li>
                     </ul>
@@ -133,7 +136,7 @@
                 </div>
             </div>
             <!-- Sidebar selese -->
-            <div id="home" class="container-fluid sm:mt-0 md:mx-0 mx-auto ml-6 md:w-full w-full px-6">
+            <div id="home" class="container-fluid sm:mt-0 md:mx-0 mx-auto ml-6 md:w-full w-full px-6 ">
                 <div class="fixed hidden sm:flex z-40 right-[1rem] left-[8rem] top-0 ">
                     <div class="absolute ml-3 inset-0 m-auto h-4 w-4 text-gray-500" id="magnifying-glass">
                         <i class=" text-sm fa-solid fa-magnifying-glass"></i>
@@ -144,8 +147,8 @@
                 </div>
                 <!-- Content Utama -->
                 <div class="w-fit h-fit pt-4 pb-10 mt-16 rounded overflow-hidden">
-                    <section id="home" class="w-full mb-24 scroll-mt-40 tersembunyi">
-                        <div class="relative page-1 px-6 overflow-hidden h-fit card border-none rounded-lg image bg-[#D5643C]"
+                    <section id="home" class="w-full mb-24 scroll-mt-40 tersembunyi fade-down">
+                        <div class="relative px-6 overflow-hidden h-fit card border-none rounded-lg image bg-[#D5643C]"
                             id="card-1">
                             <div class="flex flex-wrap items-center">
                                 <div class="content w-full px-4 text-white">
@@ -176,12 +179,14 @@
                                                 Bhuana Ilmu Populer pada 26 Desember 2017. Dalam novel ini mereka
                                                 dihadapkan pada teka teki rumit kapal Madras Moon yg berujung pada
                                                 rencana pembunuhan Kobra. Tiga tokoh utama dalam novel ini adalah
-                                            <p class="inline-block font-semibold underline decoration-green-500 ">
+                                            <p
+                                                class="inline-block font-semibold underline decoration-green-500 decoration-wavy">
                                                 Sherlock</p>
                                             ,
-                                            <p class="inline-block font-semibold underline decoration-blue-500 ">
+                                            <p
+                                                class="inline-block font-semibold underline decoration-blue-500 decoration-wavy">
                                                 Irene</p>, dan <p
-                                                class="inline-block font-semibold underline decoration-yellow-200 ">
+                                                class="inline-block font-semibold underline decoration-yellow-200 decoration-wavy">
                                                 Lupin</p>.
                                             Sherlock
                                             Holmes merupakan tokoh detektif
@@ -214,7 +219,7 @@
                         <figure class="mx-auto max-w-screen-md text-center">
                             <i class="fa-solid fa-quote-right text-grey fa-6x"></i>
                             <blockquote>
-                                <p class="text-2xl italic font-medium text-gray-900 dark:text-white">"Tiga anak luar
+                                <p class="text-2xl italic font-medium text-white">"Tiga anak luar
                                     biasa, sahabat sejati. Tiga otak cemerlang uang mengungkap kisah kejahatan.
                                     Serangkaian petualangan yang mendebarkan."</p>
                             </blockquote>
@@ -260,8 +265,7 @@
                                 </div>
 
                             </div>
-                            <div id="tokohView"
-                                class="tokoh scroll-mt-[35rem] card-wrapper hidden shadow-xl tersembunyi zoom-in">
+                            <div id="tokohView" class="tokoh card-wrapper hidden shadow-xl tersembunyi zoom-in">
                                 <div
                                     class="grid mt-12 rounded-t-lg border-t border-l border-r shadow-md border-gray-700  md:grid-cols-1 text-4xl">
                                     <figure
@@ -274,7 +278,7 @@
                                     </figure>
                                 </div>
                                 <div
-                                    class="tokohView grid border-l border-r shadow-sm border-gray-700 md:grid-cols-2  mb-0">
+                                    class="tokohView grid border-l border-r shadow-sm border-gray-700 md:grid-cols-2  mb-0 text-white">
                                     <figure
                                         class="flex flex-col justify-center items-center p-8 text-center    bg-[#33373b4f] ">
                                         <blockquote
@@ -286,13 +290,13 @@
                                         <figcaption class="flex justify-center items-center ">
                                             <div class="space-y-0.5 font-medium dark:text-white text-left">
                                                 <div class="text-center text-2xl mb-4">Sherlock Holmes</div>
-                                                <div class="text-lg font-light text-gray-500 dark:text-gray-400 px-14">
-                                                    Holmes
-                                                    dikenal karena kemahirannya dengan observasi, deduksi, ilmu forensik
-                                                    dan
-                                                    penalaran logis yang berbatasan dengan fantastis, yang ia gunakan
-                                                    ketika
-                                                    menyelidiki kasus untuk berbagai macam klien.</div>
+                                                <div class="text-lg font-light text-gray-300 dark:text-gray-300  px-14">
+                                                    Siapa yang tidak mengenal detektif yang satu ini? Sherlock Holmes
+                                                    merupakan tokoh detektif yang ditulis oleh Sir Arthur Conan Doyle.
+                                                    Pertama kali muncul di tahun 1887 dalam cerita A Study in Scarlet.
+                                                    Cerita-cerita Sherlock Holmes sudah banyak banget diadaptasi ke
+                                                    dalam berbagai bentuk, baik itu berupa novel, layar lebar, ataupun
+                                                    layar kaca.</div>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -307,19 +311,24 @@
                                         <figcaption class="flex justify-center items-center ">
                                             <div class="space-y-0.5 font-medium dark:text-white text-left">
                                                 <div class="text-center text-2xl mb-4">Irene Adler</div>
-                                                <div class="text-lg font-light text-gray-500 dark:text-gray-400 px-14">
-                                                    Meskipun secara teknis bukan penjahat dan tidak memiliki niat jahat
-                                                    terhadap Holmes, dia mengakalinya dan menghindari perangkapnya.
-                                                    Sherlock
-                                                    Holmes kemudian menyebutnya dengan hormat sebagai "Wanita".</div>
+                                                <div class="text-lg font-light text-gray-300 dark:text-gray-300  px-14">
+                                                    Irene Adler merupakan tokoh wanita yang cukup
+                                                    mencolok. Holmes digambarkan mengagumi kecantikan dan kecerdikan
+                                                    yang dimiliki Irene. Irene juga berhasil mengelabui Holmes. Dalam
+                                                    cerita-cerita adaptasi Holmes yang lain, Irene Adler sering
+                                                    digambarkan sebagai tokoh romantikanya Sherlock Holmes. Tapi
+                                                    kebanyakan sih hubungannya bersifat platonic, bukan yang romantis
+                                                    happy ending. Kalau masih ingat, di film Sherlock Holmes yang
+                                                    dibintangi Robert Downey Jr., Irene Adler juga dikisahkan wafat
+                                                    karena diracun oleh Moriarty.</div>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </div>
                                 <div
-                                    class="grid mb-8 rounded-b-lg border-b border-l border-r  shadow-sm border-gray-700  md:grid-cols-1">
+                                    class="text-white grid mb-8 rounded-b-lg border-b border-l border-r  shadow-sm border-gray-700  md:grid-cols-1">
                                     <figure
-                                        class="flex flex-col justify-center items-center p-8 text-center    bg-[#33373b4f]">
+                                        class="flex flex-col justify-center items-center p-8 text-center bg-[#33373b4f]">
                                         <blockquote
                                             class="mx-auto mb-4 max-w-2xl text-gray-500 lg:mb-8 dark:text-gray-400">
                                             <img class="w-[8rem] rounded-full" src="assets/arsene.png"
@@ -329,14 +338,12 @@
                                         <figcaption class="flex justify-center items-center ">
                                             <div class="space-y-0.5 font-medium dark:text-white text-left">
                                                 <div class="text-center text-2xl mb-4">Arsene Lupin</div>
-                                                <div class="text-lg font-light text-gray-500 dark:text-gray-400 px-14">
-                                                    Lupin merupakan seorang pencuri yang terkenal dengan selalu menjadi
-                                                    buronan polisi Prancis. Ia mencuri barang-barang berharga dari
-                                                    orang-orang kaya di Prancis dan beberapa di antaranya dikembalikan
-                                                    pada
-                                                    rakyat miskin. Meski ia bekerja untuk kebaikan, tetapi di mata
-                                                    hukum,
-                                                    perbuatannya tetap dikategorikan pelanggaran.</div>
+                                                <div class="text-lg font-light text-gray-300 dark:text-gray-300 px-14">
+                                                    Arséne Lupin merupakan tokoh gentleman thief alias pencuri pria dari
+                                                    kalangan atas asal Perancis, yang muncul pertama kali pada tahun
+                                                    1905. Cerita mengenai Arséne Lupin ini ditulis oleh seorang penulis
+                                                    Perancis, Maurice LeBlanc. Tokoh Arséne Lupin ini bisa dibilang
+                                                    semacam Robin Hood-nya kalangan bangsawan.</div>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -344,10 +351,75 @@
                             </div>
                         </div>
                     </section>
+                    <section id="buku" class="mt-20">
+                        <div class="buku border-2 border-gray-700 rounded w-full">
+                            <div class="grid grid-flow-col auto-cols-auto">
+                                <aside class="w-48 mr-2" aria-label="Sidebar">
+                                    <div class="overflow-y-auto py-4 px-3 bg-gray-800 rounded shadow-xl">
+                                        <ul class="space-y-2">
+                                            <li>
+                                                <a href="#"
+                                                    class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+
+                                                    <span class="ml-3">Dashboard</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
+
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                                <div class="w-full text-content col-span-2 px-2 py-4">
+                                    <h1 class="Title text-3xl text-white text-center fs-dancing">BAB I - Tersembunyi
+                                    </h1>
+                                    <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Does your user know how to exit out of screens? Can they follow your intended
+                                        user journey and buy something from the site you’ve designed? By running a
+                                        usability test, you’ll be able to see how users will interact with your design
+                                        once it’s live.
+                                    </p>
+                                    <blockquote
+                                        class="p-4 my-4 bg-gray-50 border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800">
+                                        <p
+                                            class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">
+                                            "Flowbite is just awesome. It contains tons of predesigned components and
+                                            pages starting from login screen to complex dashboard. Perfect choice for
+                                            your next SaaS application."</p>
+                                    </blockquote>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        First of all you need to understand how Flowbite works. This library is not
+                                        another framework. Rather, it is a set of components based on Tailwind CSS that
+                                        you can just copy-paste from the documentation.
+                                    </p>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
         <script src="animasi.js"></script>
+
+
+
         <script>
             var glass = document.getElementById("magnifying-glass");
             var searchBar = document.getElementById("searchBar")
@@ -375,18 +447,19 @@
 
                 }
             }
-
             function tentang(data) {
                 const tokohEl = document.querySelector(".tokoh")
                 const sinopsisEl = document.querySelector(".sinopsis")
                 const buttonData = data.getAttribute("data-button")
+                const sinopsisView = document.querySelector("#sinopsisView")
 
                 if (buttonData == "sinopsis") {
                     if (sinopsisEl.classList.contains("hidden")) {
                         sinopsisEl.classList.remove("hidden")
                         tokohEl.classList.add("hidden")
                         if (!sinopsisEl.classList.contains("terlihat")) {
-                            window.location.href = "#sinopsisView";
+                            const elementHeight = sinopsisView.clientHeight + 700
+                            window.scrollTo(0, elementHeight);
                         }
                     }
                 } else if (buttonData == "tokoh") {
@@ -395,12 +468,14 @@
                         tokohEl.classList.remove("hidden")
                         sinopsisEl.classList.add("hidden")
                         if (!tokohEl.classList.contains("terlihat")) {
-                            window.location.href = "#tokohView";
+                            const elementHeight = tokohEl.clientHeight;
+                            window.scrollTo(0, elementHeight);
                         }
                     }
                 }
 
             }
+
 
             // btn tentang
             const btn_tentang = document.querySelectorAll('.btn-tentang')
@@ -444,7 +519,6 @@
                     }
                 })
             }
-            activeMenuOnScroll
             window.addEventListener("scroll", activeMenuOnScroll)
 
         </script>

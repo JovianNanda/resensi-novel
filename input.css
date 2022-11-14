@@ -32,7 +32,7 @@
 }
 
 .card{
-        @apply px-4 py-5 border rounded-md sm:px-6 h-fit w-fit
+        @apply px-4 py-5 border rounded-md sm:px-6
     }
 .card-light{
         @apply bg-white border-gray-200 text-black
@@ -51,9 +51,6 @@
         background-repeat: no-repeat;
         background-color: #D5643C;
         background-size: cover;
-}
-.page-1{
-        animation: fadeInUp 1s;
 }
 
 .content{
@@ -177,9 +174,11 @@
 }
 
 .tersembunyi.zoom-in{
-        scale: 0;
+        opacity: 0;
+        transform: translateZ(0) scale(0);
 }
 .terlihat.zoom-in{
-        scale:1;
+        opacity: 1;
+        transform: translateZ(0) scale(1);
 }
 
