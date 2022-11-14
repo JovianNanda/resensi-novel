@@ -70,7 +70,9 @@
 #mobile-nav{
         transform: translateX(-260px);
 }
-
+#daftarIsiNav{
+        transform: translateX(-240px);
+}
 @keyframes fadeInUp {
         from{
                 opacity: 0;
@@ -174,11 +176,22 @@
 }
 
 .tersembunyi.zoom-in{
-        opacity: 0;
         transform: translateZ(0) scale(0);
 }
 .terlihat.zoom-in{
-        opacity: 1;
+        transform: translateZ(0) scale(1);
+}
+.tersembunyi.zoom-out{
+        transform: translateZ(0) scale(5);
+}
+.terlihat.zoom-out{
         transform: translateZ(0) scale(1);
 }
 
+
+.tersembunyi.flip-left{
+        transform: rotateY(180deg);
+}
+.terlihat.flip-left{
+        transform: rotateY(0);
+}

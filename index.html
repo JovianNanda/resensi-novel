@@ -129,7 +129,7 @@
                                 </svg>
                             </div>
                             <input
-                                class="bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-100  rounded w-full text-sm text-black placeholder-gray-400 bg-gray-100 pl-10 py-2"
+                                class="bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-100  rounded w-full text-sm text-black placeholder-gray-400 pl-10 py-2"
                                 type="text" placeholder="Search" />
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                         <i class=" text-sm fa-solid fa-magnifying-glass"></i>
                     </div>
                     <input
-                        class="pt-4 transition-all duration-700 bg-[#1D2123] h-20 focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder-gray-500 focus:placeholder-gray-200  rounded w-full text-sm text-gray-300 pl-10 py-2"
+                        class="pt-4 transition-all duration-700 bg-[#1D2123] border-0 h-20 focus:outline-none focus:ring-1 focus:ring-gray-500 placeholder-gray-500 focus:placeholder-gray-200  rounded w-full text-sm text-gray-300 pl-10 py-2"
                         type="text" placeholder="Search" id="searchBar" />
                 </div>
                 <!-- Content Utama -->
@@ -219,7 +219,7 @@
                         <figure class="mx-auto max-w-screen-md text-center">
                             <i class="fa-solid fa-quote-right text-grey fa-6x"></i>
                             <blockquote>
-                                <p class="text-2xl italic font-medium text-white">"Tiga anak luar
+                                <p class="text-2xl italic font-medium text-secondary">"Tiga anak luar
                                     biasa, sahabat sejati. Tiga otak cemerlang uang mengungkap kisah kejahatan.
                                     Serangkaian petualangan yang mendebarkan."</p>
                             </blockquote>
@@ -280,7 +280,7 @@
                                 <div
                                     class="tokohView grid border-l border-r shadow-sm border-gray-700 md:grid-cols-2  mb-0 text-white">
                                     <figure
-                                        class="flex flex-col justify-center items-center p-8 text-center    bg-[#33373b4f] ">
+                                        class="flex flex-col justify-center items-center p-8 text-center bg-[#33373b4f] ">
                                         <blockquote
                                             class="mx-auto mb-4 max-w-2xl text-gray-500 lg:mb-8 dark:text-gray-400">
                                             <img class="w-40 rounded-full" src="assets/sherlock.png"
@@ -351,24 +351,47 @@
                             </div>
                         </div>
                     </section>
-                    <section id="buku" class="mt-20">
-                        <div class="buku border-2 border-gray-700 rounded w-full">
-                            <div class="grid grid-flow-col auto-cols-auto">
-                                <aside class="w-48 mr-2" aria-label="Sidebar">
-                                    <div class="overflow-y-auto py-4 px-3 bg-gray-800 rounded shadow-xl">
-                                        <ul class="space-y-2">
+                    <section id="buku" class="mt-20 ">
+                        <div class="buku-title tersembunyi fade-right">
+                            <h1 class="text-4xl text-secondary text-center my-8">Resensi Novel</h1>
+                        </div>
+                        <div
+                            class="buku border-2 border-gray-700 rounded w-full  tersembunyi fade-left time-2 overflow-x-hidden">
+                            <div class="grid grid-flow-col auto-cols-auto relative">
+                                <aside class="w-fit mr-2 transition-all duration-500 absolute top-0 bottom-0 left-0"
+                                    aria-label="Sidebar" id="daftarIsiNav">
+                                    <div class="overflow-y-auto py-4 px-3 h-full w-full bg-gray-800 rounded shadow-xl ">
+                                        <h1 class="text-center mb-5 font-bold text-2xl text-white">Daftar
+                                            Isi
+                                            <button aria-label="toggle sidebar" id="openDaftarIsiNav"
+                                                class="h-12  w-10 bg-gray-800 absolute right-0 -mr-10 top-2 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                                                onclick="daftarIsiHandler(true)">
+                                                <i class="fa-solid fa-angles-right text-white"></i>
+                                            </button>
+                                            <button aria-label="Close sidebar" id="closeDaftarIsiNav"
+                                                class="hidden h-12  w-10 bg-gray-800 absolute right-0 -mr-10 top-2 items-center shadow rounded-tr rounded-br justify-center cursor-pointer text-white"
+                                                onclick="daftarIsiHandler(false)">
+                                                <i class="fa-solid fa-angles-left text-white"></i>
+                                            </button>
+                                        </h1>
+                                        <div class="py-4 mt-7 space-y-2 border-t border-gray-700">
+                                        </div>
+                                        <ul class="space-y-2 ">
                                             <li>
                                                 <a href="#"
                                                     class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB I -
+                                                        Tersembunyi</span>
 
-                                                    <span class="ml-3">Dashboard</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#"
                                                     class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
 
-                                                    <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB II -
+                                                        Tempat Istimewa
+                                                    </span>
 
                                                 </a>
                                             </li>
@@ -376,36 +399,48 @@
                                                 <a href="#"
                                                     class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
 
-                                                    <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB III -
+                                                        Pria Bertopi Biru
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB IV -
+                                                        Tipuan Cerdik
+                                                    </span>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </aside>
-                                <div class="w-full text-content col-span-2 px-2 py-4">
-                                    <h1 class="Title text-3xl text-white text-center fs-dancing">BAB I - Tersembunyi
+                                <div
+                                    class="text-justify w-full max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
+                                    <h1 class="Title text-3xl text-secondary text-center fs-dancing">BAB I - Tersembunyi
                                     </h1>
-                                    <div class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+                                    <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
                                     </div>
-                                    <p class="text-gray-500 dark:text-gray-400">
-                                        Does your user know how to exit out of screens? Can they follow your intended
-                                        user journey and buy something from the site you’ve designed? By running a
-                                        usability test, you’ll be able to see how users will interact with your design
-                                        once it’s live.
+                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">
+                                        Setelah kematian ibu angkat Irene, Genevieve. Leopoldo (ayah irene) memutuskan
+                                        untuk pergi meninggalkan paris untuk hidup di london selamanya meninggalkan
+                                        kehidupan lama mereka di paris dengan memulai yang baru di london.
                                     </p>
-                                    <blockquote
-                                        class="p-4 my-4 bg-gray-50 border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800">
-                                        <p
-                                            class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">
-                                            "Flowbite is just awesome. It contains tons of predesigned components and
-                                            pages starting from login screen to complex dashboard. Perfect choice for
-                                            your next SaaS application."</p>
-                                    </blockquote>
-                                    <p class="text-gray-500 dark:text-gray-400">
-                                        First of all you need to understand how Flowbite works. This library is not
-                                        another framework. Rather, it is a set of components based on Tailwind CSS that
-                                        you can just copy-paste from the documentation.
+                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">
+                                        Irene yang
+                                        masih murung masih tidak sepenuhnya mengerti akan ibu angkatnya, Genevieve
+                                        dengan baik masih bingung akan perlakuan ibunya sendiri. Tetapi dia tak akan
+                                        bisa lagi mengertikan ibunya karena sudah mati di tangan penjahat karena
+                                        kecerobohan nya sendiri.
                                     </p>
+                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">Ayahnya berusaha meyakinkan
+                                        irene bahwa dia kuat, dan
+                                        semua akan kembali seperti normal lagi, walaupun irene tahu bahwa ayahnya sangat
+                                        terpukul dan terkadang menangis akan kehilangan istri tercintanya. Di hari hari
+                                        penuh kesepian itu, diterangi cahaya london yang terik untuk menyemangatinya dan
+                                        berusaha menenangkan pikirannya dengan musik sebelum peristiwa peristiwa lain
+                                        akan datang.</p>
 
 
                                 </div>
@@ -424,8 +459,11 @@
             var glass = document.getElementById("magnifying-glass");
             var searchBar = document.getElementById("searchBar")
             var sideBar = document.getElementById("mobile-nav");
+            var daftarIsiBar = document.getElementById("daftarIsiNav");
             var openSidebar = document.getElementById("openSideBar");
             var closeSidebar = document.getElementById("closeSideBar");
+            var openDaftarIsiNav = document.getElementById("openDaftarIsiNav");
+            var closeDaftarIsiNav = document.getElementById("closeDaftarIsiNav");
             searchBar.addEventListener("focus", function () {
                 glass.classList.add("text-white")
                 glass.classList.remove("text-gray-500")
@@ -437,14 +475,24 @@
 
             function sidebarHandler(flag) {
                 if (flag) {
-                    sideBar.style.transform = "translateX(0px)";
+                    sideBar.style.transform = "translateX(0)"
                     openSidebar.classList.add("hidden");
                     closeSidebar.classList.remove("hidden");
                 } else {
-                    sideBar.style.transform = "translateX(-260px)";
+                    sideBar.style.transform = "translateX(-260px)"
                     closeSidebar.classList.add("hidden");
                     openSidebar.classList.remove("hidden");
-
+                }
+            }
+            function daftarIsiHandler(flag) {
+                if (flag) {
+                    daftarIsiBar.style.transform = "translateX(0)";
+                    openDaftarIsiNav.classList.add("hidden");
+                    closeDaftarIsiNav.classList.remove("hidden");
+                } else {
+                    daftarIsiBar.style.transform = "translateX(-240px)";
+                    closeDaftarIsiNav.classList.add("hidden");
+                    openDaftarIsiNav.classList.remove("hidden");
                 }
             }
             function tentang(data) {
@@ -452,7 +500,6 @@
                 const sinopsisEl = document.querySelector(".sinopsis")
                 const buttonData = data.getAttribute("data-button")
                 const sinopsisView = document.querySelector("#sinopsisView")
-
                 if (buttonData == "sinopsis") {
                     if (sinopsisEl.classList.contains("hidden")) {
                         sinopsisEl.classList.remove("hidden")
@@ -463,7 +510,6 @@
                         }
                     }
                 } else if (buttonData == "tokoh") {
-
                     if (tokohEl.classList.contains("hidden")) {
                         tokohEl.classList.remove("hidden")
                         sinopsisEl.classList.add("hidden")
@@ -473,9 +519,7 @@
                         }
                     }
                 }
-
             }
-
 
             // btn tentang
             const btn_tentang = document.querySelectorAll('.btn-tentang')
