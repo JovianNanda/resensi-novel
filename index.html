@@ -65,11 +65,18 @@
                                     <i class="fa-solid fa-circle-info"></i>
                                 </a>
                             </li>
-                            <li class="nav_item buku flex justify-center text-grey cursor-pointer items-center ">
+                            <li class="nav_item buku flex justify-center text-grey cursor-pointer items-center mb-4">
                                 <a href="#buku"
                                     class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-secondary transition-all duration-500">
                                     <i class="fa-solid fa-book" alt="Book"></i>
-                                    <p class="sr-only">Book</p>
+                                    <p class="sr-only">Buku</p>
+                                </a>
+                            </li>
+                            <li class="nav_item penulis flex justify-center text-grey cursor-pointer items-center ">
+                                <a href="#penulis"
+                                    class="flex px-5 py-2  items-center focus:outline-none hover:text-white focus:text-secondary transition-all duration-500">
+                                    <i class="fa-solid fa-feather"></i>
+                                    <p class="sr-only">Penulis</p>
                                 </a>
                             </li>
                         </ul>
@@ -114,6 +121,13 @@
                             <a href="#buku" class="flex items-center">
                                 <i class="fas fa-book"></i>
                                 <span class="text-md ml-6">Buku</span>
+                            </a>
+                        </li>
+                        <li
+                            class="nav_item penulis flex justify-between text-grey hover:text-white cursor-pointer items-center mb-6  transition-all duration-500 focus:outline-none focus:text-white">
+                            <a href="#penulis" class="flex items-center">
+                                <i class="fa-solid fa-feather"></i>
+                                <span class="text-md ml-6">Penulis</span>
                             </a>
                         </li>
                     </ul>
@@ -352,11 +366,12 @@
                         </div>
                     </section>
                     <section id="buku" class="mt-20 ">
-                        <div class="buku-title tersembunyi fade-right">
+
+                        <div class="buku-title tersembunyi fade-right ">
                             <h1 class="text-4xl text-secondary text-center my-8">Resensi Novel</h1>
                         </div>
                         <div
-                            class="buku border-2 border-gray-700 rounded w-full  tersembunyi fade-left time-2 overflow-x-hidden">
+                            class="buku border-2 border-dashed border-gray-700 rounded w-full shadow-xl tersembunyi fade-left time-2 overflow-x-hidden">
                             <div class="grid grid-flow-col auto-cols-auto relative">
                                 <aside class="w-fit mr-2 transition-all duration-500 absolute top-0 bottom-0 left-0"
                                     aria-label="Sidebar" id="daftarIsiNav">
@@ -378,16 +393,16 @@
                                         </div>
                                         <ul class="space-y-2 ">
                                             <li>
-                                                <a href="javascript:void()" data-target-cerita="1"
-                                                    class="daftarIsi-active flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                                                <a target-cerita="1"
+                                                    class="daftarIsi-active cursor-pointer flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB I -
                                                         Tersembunyi</span>
 
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void()" data-target-cerita="2"
-                                                    class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
+                                                <a target-cerita="2"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB II -
                                                         Tempat Istimewa
@@ -396,8 +411,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void()" data-target-cerita="3"
-                                                    class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+                                                <a target-cerita="3"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB III -
                                                         Pria Bertopi Biru
@@ -405,8 +420,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void()" data-target-cerita="4"
-                                                    class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
+                                                <a target-cerita="4"
+                                                    class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB IV -
                                                         Tipuan Cerdik
@@ -419,15 +434,33 @@
                                 <div>
                                     <div
                                         class="text-justify w-full max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
-                                        <h1 class="Title text-3xl text-secondary text-center fs-dancing" data-bab>
+                                        <h1 class="Title text-3xl text-secondary text-center fs-dancing" bab-cerita>
                                             BAB I
                                             -
                                             Tersembunyi
                                         </h1>
                                         <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
                                         </div>
-                                        <div class="isi-cerita" data-isi>
-
+                                        <div class="text-justify isi-cerita px-10 py-10 leading-8 text-xl" isi-cerita>
+                                            <p class="mb-3 font-light text-gray-200" id="cerita-1">Setelah kematian
+                                                ibu angkat Irene, Genevieve. Leopoldo (ayah irene) memutuskan untuk
+                                                pergi meninggalkan paris untuk hidup di london selamanya meninggalkan
+                                                kehidupan lama mereka di paris dengan memulai yang baru di london. </p>
+                                            <p class="font-light text-gray-200" id="cerita-2">Irene
+                                                yang masih murung masih tidak sepenuhnya mengerti akan ibu angkatnya,
+                                                Genevieve dengan baik masih bingung akan perlakuan ibunya sendiri.
+                                                Tetapi dia tak akan bisa lagi mengertikan ibunya karena sudah mati di
+                                                tangan penjahat karena kecerobohan nya sendiri. Ayahnya berusaha
+                                                meyakinkan irene bahwa dia kuat, dan semua akan kembali seperti normal
+                                                lagi, walaupun irene tahu bahwa ayahnya sangat terpukul dan terkadang
+                                                menangis akan kehilangan istri tercintanya.
+                                            </p>
+                                            <br>
+                                            <p class="font-light text-gray-200" id="cerita-3">
+                                                Di hari hari penuh kesepian itu, diterangi cahaya london yang terik
+                                                untuk menyemangatinya dan berusaha menenangkan pikirannya dengan
+                                                musik sebelum peristiwa peristiwa lain akan datang.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -435,12 +468,42 @@
 
                         </div>
                     </section>
+                    <section id="penulis">
+
+                    </section>
                 </div>
             </div>
         </div>
         <script src="animasi.js"></script>
-        <script src="getData.js"></script>
+        <!-- fetch -->
+        <script defer>
 
+            babCerita = $("[bab-cerita]")
+            isiCerita = $("[isi-cerita]")
+            const targetCerita = document.querySelectorAll("[target-cerita]")
+            let targetId = 1;
+            targetCerita.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    targetId = btn.getAttribute("target-cerita")
+                    $.ajax({
+                        type: 'GET',
+                        url: 'sherlock.json',
+                        data: { get_param: 'value' },
+                        dataType: 'json',
+                        success: function (data) {
+                            cerita = data.find(x => x.id == targetId);
+                            babCerita.animate({ 'opacity': 0 }, 400, function () {
+                                babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 400);
+                            });
+
+                        }
+                    });
+                })
+            })
+
+
+
+        </script>
 
         <script>
             var glass = document.getElementById("magnifying-glass");
@@ -508,7 +571,7 @@
                 }
             }
 
-            const buttonDaftarIsi = document.querySelectorAll("[data-target-cerita]")
+            const buttonDaftarIsi = document.querySelectorAll("[target-cerita]")
             buttonDaftarIsi.forEach(function (el) {
                 el.addEventListener('click', function () {
                     buttonDaftarIsi.forEach(function (element) {
