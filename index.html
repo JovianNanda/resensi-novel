@@ -545,8 +545,7 @@
                                                 <a target-cerita="18"
                                                     class="flex items-center cursor-pointer p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700 transition-all duration-500">
 
-                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XVII - Seorang
-                                                        Kenalan Baru
+                                                    <span class="flex-1 ml-3 whitespace-nowrap">BAB XVII - Si Kobra
                                                     </span>
                                                 </a>
                                             </li>
@@ -622,7 +621,7 @@
                     $i = 0;
                     $(cerita.isi).each(function () {
                         let increment = $i++
-                        isiCerita.prepend("<p class='mb-3 font-light text-gray-200' id='text-cerita-" + increment + "'></p>")
+                        isiCerita.append("<p class='mb-3 font-light text-gray-200' id='text-cerita-" + increment + "'></p>")
                         $("#text-cerita-" + increment).text(cerita.isi[increment])
                     })
                 }
@@ -633,6 +632,7 @@
             //                 });
             targetCerita.forEach(function (btn) {
                 btn.addEventListener("click", function () {
+                    isiCerita.empty();
                     targetId = btn.getAttribute("target-cerita")
                     $.ajax({
                         type: 'GET',
@@ -665,8 +665,9 @@
 
                             $(cerita.isi).each(function () {
                                 let increment = $i++
-                                if (!$("#text-cerita-" + increment)) {
-                                    isiCerita.append("<p class='mb-3 font-light text-gray-200 content' id='text-cerita-" + increment + "'></p>");
+                                if (!$("#text-cerita-" + increment).length) {
+                                    isiCerita.append("<p class='mb-4 font-light text-gray-200 content' id='text-cerita-" + increment + "'></p>");
+
                                 }
                                 $(isiCerita).animate({ 'opacity': 0 }, 300, function () {
                                     isiCerita.animate({ 'opacity': 1 }, 300);
