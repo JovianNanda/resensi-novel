@@ -46,6 +46,10 @@
 .sidebar-active{
         @apply text-secondary
     }
+
+.daftarIsi-active{
+        @apply bg-gray-700
+} 
 #card-1{
         background-image: url("assets/vector.svg");
         background-repeat: no-repeat;

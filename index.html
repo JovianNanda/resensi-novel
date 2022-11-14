@@ -378,15 +378,15 @@
                                         </div>
                                         <ul class="space-y-2 ">
                                             <li>
-                                                <a href="#"
-                                                    class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                                                <a href="javascript:void()" data-target-cerita="1"
+                                                    class="daftarIsi-active flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB I -
                                                         Tersembunyi</span>
 
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#"
+                                                <a href="javascript:void()" data-target-cerita="2"
                                                     class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB II -
@@ -396,7 +396,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#"
+                                                <a href="javascript:void()" data-target-cerita="3"
                                                     class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB III -
@@ -405,7 +405,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#"
+                                                <a href="javascript:void()" data-target-cerita="4"
                                                     class="flex items-center p-2 text-base font-normal  rounded-lg text-white hover:bg-gray-700">
 
                                                     <span class="flex-1 ml-3 whitespace-nowrap">BAB IV -
@@ -416,33 +416,20 @@
                                         </ul>
                                     </div>
                                 </aside>
-                                <div
-                                    class="text-justify w-full max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
-                                    <h1 class="Title text-3xl text-secondary text-center fs-dancing">BAB I - Tersembunyi
-                                    </h1>
-                                    <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
+                                <div>
+                                    <div
+                                        class="text-justify w-full max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
+                                        <h1 class="Title text-3xl text-secondary text-center fs-dancing" data-bab>
+                                            BAB I
+                                            -
+                                            Tersembunyi
+                                        </h1>
+                                        <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
+                                        </div>
+                                        <div class="isi-cerita" data-isi>
+
+                                        </div>
                                     </div>
-                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">
-                                        Setelah kematian ibu angkat Irene, Genevieve. Leopoldo (ayah irene) memutuskan
-                                        untuk pergi meninggalkan paris untuk hidup di london selamanya meninggalkan
-                                        kehidupan lama mereka di paris dengan memulai yang baru di london.
-                                    </p>
-                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">
-                                        Irene yang
-                                        masih murung masih tidak sepenuhnya mengerti akan ibu angkatnya, Genevieve
-                                        dengan baik masih bingung akan perlakuan ibunya sendiri. Tetapi dia tak akan
-                                        bisa lagi mengertikan ibunya karena sudah mati di tangan penjahat karena
-                                        kecerobohan nya sendiri.
-                                    </p>
-                                    <p class="text-gray-300 leading-9 text-xl py-4 px-10">Ayahnya berusaha meyakinkan
-                                        irene bahwa dia kuat, dan
-                                        semua akan kembali seperti normal lagi, walaupun irene tahu bahwa ayahnya sangat
-                                        terpukul dan terkadang menangis akan kehilangan istri tercintanya. Di hari hari
-                                        penuh kesepian itu, diterangi cahaya london yang terik untuk menyemangatinya dan
-                                        berusaha menenangkan pikirannya dengan musik sebelum peristiwa peristiwa lain
-                                        akan datang.</p>
-
-
                                 </div>
                             </div>
 
@@ -452,7 +439,7 @@
             </div>
         </div>
         <script src="animasi.js"></script>
-
+        <script src="getData.js"></script>
 
 
         <script>
@@ -520,6 +507,16 @@
                     }
                 }
             }
+
+            const buttonDaftarIsi = document.querySelectorAll("[data-target-cerita]")
+            buttonDaftarIsi.forEach(function (el) {
+                el.addEventListener('click', function () {
+                    buttonDaftarIsi.forEach(function (element) {
+                        element.classList.remove('daftarIsi-active')
+                    })
+                    this.classList.add('daftarIsi-active')
+                })
+            })
 
             // btn tentang
             const btn_tentang = document.querySelectorAll('.btn-tentang')

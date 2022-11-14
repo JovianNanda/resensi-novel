@@ -1951,12 +1951,12 @@ input:checked + .toggle-bg {
   line-height: 1.5;
 }
 
-.leading-9 {
-  line-height: 2.25rem;
-}
-
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
 }
 
 .tracking-\[0\.03rem\] {
@@ -2222,6 +2222,11 @@ input:checked + .toggle-bg {
 
 .sidebar-active{
   color: #FACD66;
+}
+
+.daftarIsi-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 #card-1{
