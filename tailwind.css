@@ -1293,6 +1293,22 @@ input:checked + .toggle-bg {
   max-height: 100vh;
 }
 
+.min-h-\[50rem\] {
+  min-height: 50rem;
+}
+
+.min-h-\[\] {
+  min-height: ;
+}
+
+.min-h-\[20vh\] {
+  min-height: 20vh;
+}
+
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
+
 .w-full {
   width: 100%;
 }

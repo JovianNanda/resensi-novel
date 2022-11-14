@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novel Sherlock Lupin & Aku</title>
     <link rel="stylesheet" href="tailwind.css">
-    <script src="node_modules/flowbite/dist/flowbite.js"></script>
     <script src="https://kit.fontawesome.com/7714cab572.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -433,34 +432,13 @@
                                 </aside>
                                 <div>
                                     <div
-                                        class="text-justify w-full max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
+                                        class="buku-content text-justify w-full min-h-[50vh] max-h-screen text-content col-span-2 px-10 py-6 overflow-y-auto ">
                                         <h1 class="Title text-3xl text-secondary text-center fs-dancing" bab-cerita>
-                                            BAB I
-                                            -
-                                            Tersembunyi
+
                                         </h1>
                                         <div class="pt-4 mt-4 space-y-2 border-t border-gray-700">
                                         </div>
                                         <div class="text-justify isi-cerita px-10 py-10 leading-8 text-xl" isi-cerita>
-                                            <p class="mb-3 font-light text-gray-200" id="cerita-1">Setelah kematian
-                                                ibu angkat Irene, Genevieve. Leopoldo (ayah irene) memutuskan untuk
-                                                pergi meninggalkan paris untuk hidup di london selamanya meninggalkan
-                                                kehidupan lama mereka di paris dengan memulai yang baru di london. </p>
-                                            <p class="font-light text-gray-200" id="cerita-2">Irene
-                                                yang masih murung masih tidak sepenuhnya mengerti akan ibu angkatnya,
-                                                Genevieve dengan baik masih bingung akan perlakuan ibunya sendiri.
-                                                Tetapi dia tak akan bisa lagi mengertikan ibunya karena sudah mati di
-                                                tangan penjahat karena kecerobohan nya sendiri. Ayahnya berusaha
-                                                meyakinkan irene bahwa dia kuat, dan semua akan kembali seperti normal
-                                                lagi, walaupun irene tahu bahwa ayahnya sangat terpukul dan terkadang
-                                                menangis akan kehilangan istri tercintanya.
-                                            </p>
-                                            <br>
-                                            <p class="font-light text-gray-200" id="cerita-3">
-                                                Di hari hari penuh kesepian itu, diterangi cahaya london yang terik
-                                                untuk menyemangatinya dan berusaha menenangkan pikirannya dengan
-                                                musik sebelum peristiwa peristiwa lain akan datang.
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -480,8 +458,35 @@
 
             babCerita = $("[bab-cerita]")
             isiCerita = $("[isi-cerita]")
+            bukuContent = $(".buku-content")
             const targetCerita = document.querySelectorAll("[target-cerita]")
             let targetId = 1;
+
+            $.ajax({
+                type: 'GET',
+                url: 'sherlock.json',
+                data: { get_param: 'value' },
+                dataType: 'json',
+                success: function (data) {
+                    cerita = data.find(x => x.id === targetId);
+
+                    $(cerita.isi).each(function (k, v) {
+                        ceritaIsi = v
+                    })
+                    babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 300);
+                    $i = 0;
+                    $(cerita.isi).each(function () {
+                        let increment = $i++
+                        isiCerita.append("<p class='mb-3 font-light text-gray-200' id='text-cerita-" + increment + "'></p>")
+
+                        $("#text-cerita-" + increment).text(cerita.isi[increment])
+                    })
+                }
+            });
+
+            // babCerita.animate({ 'opacity': 0 }, 300, function () {
+            //                     babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 300);
+            //                 });
             targetCerita.forEach(function (btn) {
                 btn.addEventListener("click", function () {
                     targetId = btn.getAttribute("target-cerita")
@@ -492,9 +497,19 @@
                         dataType: 'json',
                         success: function (data) {
                             cerita = data.find(x => x.id == targetId);
-                            babCerita.animate({ 'opacity': 0 }, 400, function () {
-                                babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 400);
-                            });
+                            $(cerita.isi).each(function (k, v) {
+                                ceritaIsi = v
+                            })
+                            babCerita.html(cerita.bab).animate({ 'opacity': 1 }, 300);
+                            $i = 0;
+                            $(cerita.isi).each(function () {
+                                let increment = $i++
+                                if (!$("#text-cerita-" + increment)) {
+                                    isiCerita.append("<p class='mb-3 font-light text-gray-200 content' id='text-cerita-" + increment + "'></p>")
+                                }
+
+                                $("#text-cerita-" + increment).text(cerita.isi[increment])
+                            })
 
                         }
                     });
