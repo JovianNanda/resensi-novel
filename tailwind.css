@@ -1502,6 +1502,26 @@ input:checked + .toggle-bg {
   scroll-margin-top: 8rem;
 }
 
+.scroll-mt-28 {
+  scroll-margin-top: 7rem;
+}
+
+.scroll-mt-24 {
+  scroll-margin-top: 6rem;
+}
+
+.scroll-mt-2 {
+  scroll-margin-top: 0.5rem;
+}
+
+.scroll-mt-\[5\.5re\2c \] {
+  scroll-margin-top: 5.5re,;
+}
+
+.scroll-mt-\[5\.5rem\] {
+  scroll-margin-top: 5.5rem;
+}
+
 .auto-cols-auto {
   grid-auto-columns: auto;
 }
