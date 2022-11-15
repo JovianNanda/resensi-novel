@@ -1256,6 +1256,10 @@ input:checked + .toggle-bg {
   margin-top: 0.25rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -1767,6 +1771,11 @@ input:checked + .toggle-bg {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-blue-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 202 254 / var(--tw-border-opacity));
+}
+
 .bg-\[\#1D2123\] {
   --tw-bg-opacity: 1;
   background-color: rgb(29 33 35 / var(--tw-bg-opacity));
@@ -2166,8 +2175,28 @@ input:checked + .toggle-bg {
   text-decoration-color: #FCE96A;
 }
 
+.decoration-black {
+  text-decoration-color: #000000;
+}
+
+.decoration-blue-400 {
+  text-decoration-color: #76A9FA;
+}
+
+.decoration-orange-300 {
+  text-decoration-color: #FDBA8C;
+}
+
 .decoration-wavy {
   text-decoration-style: wavy;
+}
+
+.decoration-from-font {
+  text-decoration-thickness: from-font;
+}
+
+.decoration-2 {
+  text-decoration-thickness: 2px;
 }
 
 .placeholder-gray-400::-moz-placeholder {
@@ -2558,6 +2587,64 @@ input:checked + .toggle-bg {
 
 .terlihat.flip-left{
   transform: rotateY(0);
+}
+
+.after\:mx-auto::after {
+  content: var(--tw-content);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.after\:mt-2::after {
+  content: var(--tw-content);
+  margin-top: 0.5rem;
+}
+
+.after\:block::after {
+  content: var(--tw-content);
+  display: block;
+}
+
+.after\:w-1\/2::after {
+  content: var(--tw-content);
+  width: 50%;
+}
+
+.after\:w-20::after {
+  content: var(--tw-content);
+  width: 5rem;
+}
+
+.after\:w-10::after {
+  content: var(--tw-content);
+  width: 2.5rem;
+}
+
+.after\:w-32::after {
+  content: var(--tw-content);
+  width: 8rem;
+}
+
+.after\:border-b-2::after {
+  content: var(--tw-content);
+  border-bottom-width: 2px;
+}
+
+.after\:border-\[\#3b82f6\]::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
+.after\:border-gray-500::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 .hover\:scale-105:hover {
