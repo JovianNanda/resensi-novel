@@ -1570,6 +1570,14 @@ input:checked + .toggle-bg {
   scroll-margin-top: 9rem;
 }
 
+.scroll-mt-52 {
+  scroll-margin-top: 13rem;
+}
+
+.scroll-mt-44 {
+  scroll-margin-top: 11rem;
+}
+
 .auto-cols-auto {
   grid-auto-columns: auto;
 }
