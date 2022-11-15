@@ -1256,6 +1256,10 @@ input:checked + .toggle-bg {
   margin-top: 13rem;
 }
 
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -1500,6 +1504,14 @@ input:checked + .toggle-bg {
 
 .scroll-mt-32 {
   scroll-margin-top: 8rem;
+}
+
+.scroll-mt-24 {
+  scroll-margin-top: 6rem;
+}
+
+.scroll-mt-36 {
+  scroll-margin-top: 9rem;
 }
 
 .auto-cols-auto {
