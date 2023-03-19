@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/assets/js/min/animasi.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/js/min/functions.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/js/min/resensi.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/js/min/resensi.min.min.js" />
+        <item url="file://$PROJECT_DIR$/assets/js/resensi.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/assets/js/min/animasi.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/js/min/functions.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/js/min/resensi.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/js/min/resensi.min.min.js" />
+      <root url="file://$PROJECT_DIR$/assets/js/resensi.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
