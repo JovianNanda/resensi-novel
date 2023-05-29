@@ -6,6 +6,6 @@ Dibuat dengan TailwindCSS Dan Flowbite JS untuk carousel.
 
 Link Website : https://sherlock-lupin.netlify.app/ 
 
-
+PS: Not Optimized For Mobile Screen :)
 
 ~ By Jovian Nanda Sismawan ❤️
