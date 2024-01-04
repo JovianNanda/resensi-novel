@@ -1155,6 +1155,9 @@ input:checked + .toggle-bg {
 .-mr-10 {
   margin-right: -2.5rem;
 }
+.-mr-16 {
+  margin-rigt: -4rem;
+}
 
 .mt-20 {
   margin-top: 5rem;
